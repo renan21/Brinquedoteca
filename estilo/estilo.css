@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+
+
+div#barra {
+	background-color: #17a2b8;
+    width: 100%;
+    height: 40px;
+}
+
+form#formulario {
+    width: 35%;
+	margin-top: 3%;
+    margin-left: 2%;
+}
+
+h3#titulo {
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+select#exampleFormControlSelect {
+    margin-left: 2%;
+}
+
+button.btn.btn-primary {
+    margin-left: 88%;
+}
