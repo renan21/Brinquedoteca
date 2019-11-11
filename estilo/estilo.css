@@ -1,28 +1,53 @@
 @CHARSET "UTF-8";
 
 
-
 div#barra {
-	background-color: #17a2b8;
+	background-color: #56af65;
     width: 100%;
     height: 40px;
 }
 
 form#formulario {
     width: 35%;
-	margin-top: 3%;
+	margin-top: 1%;
     margin-left: 2%;
 }
 
 h3#titulo {
     margin-left: 1%;
-    margin-top: 1%;
+    margin-top: 5px;
 }
 
 select#exampleFormControlSelect {
     margin-left: 2%;
 }
 
-button.btn.btn-primary {
+button.btn.btn-success {
     margin-left: 88%;
+}
+
+img {
+    width: 20px;
+}
+
+table.cabecalho {
+    width: 85%;
+    margin-left: 11%;
+}
+
+td.cabecalho {    
+    padding-top: 6px;
+}
+
+a.cabecalho {
+	color: #ffffff;
+}
+
+table#grid {
+    position: fixed;
+    text-align: center;
+}
+
+label {
+    margin-top: 8px;
 }
