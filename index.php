@@ -14,8 +14,7 @@
 						echo "
 							<table class='table table-hover' id='grid'>
 								<tr>
-									<th><h3>Dia</h3></th>
-									<th><h3>Mês</h3></th>
+									<th><h3>Data</h3></th>									
 									<th><h3>Horário</h3></th>
 									<th><h3>Sala</h3></th>
 									<th><h3>Responsável</h3></th>
@@ -28,8 +27,7 @@
 				<?php foreach($agendamentos as $agendamento):?>
 				
 					<tr>
-						<td><?= $agendamento['DIA'] ?></td>
-						<td><?= $agendamento['MES'] ?></a></td>
+						<td><?= $agendamento['DATA'] ?></td>
 						<td><?= $agendamento['HORA'] ?></td>
 						<td><?= $agendamento['SALA'] ?></td>
 						<td>teste</td>
