@@ -2,11 +2,14 @@
 	include('conexao.php');
 
 	$sala = $_GET['salaSelect'];
-	$mes = $_GET['mesSelect'];
-	$dia = $_GET['diaSelect'];
+	$data = $_GET['dataSelect'];
 	$hora = $_GET['horaSelect'];
 	
-	$query = "insert into agendamentos (sala, dia, hora, mes) value ('{$sala}', '{$dia}', '{$hora}', '{$mes}')";
+/*	$mes = $_GET['mesSelect'];
+	$dia = $_GET['diaSelect'];*/
+	
+	
+	$query = "insert into agendamentos (sala, data, hora) value ('{$sala}', '{$data}', '{$hora}')";
 	
 /*	echo $query; */
 	

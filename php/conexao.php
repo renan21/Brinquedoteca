@@ -68,12 +68,25 @@
 	function getAgendamentos($link){
 	
 		$agendamentos = array();
-		$query = "select * from agendamentos order by mes, dia, hora";
+		$query = "select * from agendamentos order by data, hora";
 		$result = mysqli_query($link, $query);
 	
 		while($fetch = mysqli_fetch_assoc($result)){
 			array_push($agendamentos, $fetch);
 		}
 		return $agendamentos;
+	}
+	
+	function getInstituicoes($link){
+		
+		$instituicoes= array();
+		$query = "select * from instituicao order by nome";
+		$result = mysqli_query($link, $query);
+		
+		while($fetch = mysqli_fetch_assoc($result)){
+			array_push($instituicoes, $fetch);
+		}
+		return $instituicoes;
+		
 	}
 ?>

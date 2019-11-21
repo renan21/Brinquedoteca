@@ -5,8 +5,12 @@
 	<head>
 		<?php 	include('php/head.php'); ?> 
 		<title></title>
-		
+				
 		<script type="text/javascript">
+
+        	$(function() {
+        		$('.datetimepicker1').datetimepicker();
+       		});
 
 			function submitTheForm(type){
 				
@@ -50,10 +54,20 @@
 				?>
     		</select>
     		
-    		
+ 	     	<label for="exampleFormControlSelect">Data</label>
+ 	     	
+ 	     	<div class='input-group date datetimepicker1'>
+            	<input type='text' data-date-format="DD/MM/YYYY" class="form-control" name="dataSelect" id="dataSelect"/>
+                <span class="input-group-addon">
+                	<span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+  		
     		
     		    		
-	     	<label for="exampleFormControlSelect">Mês</label>
+<!--  	   ************************   logica antiga para data ************************
+
+			   <label for="exampleFormControlSelect">Mês</label> 	
 	  		   <select class="form-control" name="mesSelect" onchange="submitTheForm(1)">
 				<?php 
 					$meses = getMeses($link);
@@ -93,10 +107,12 @@
 						
 
 				?>
-    		</select>
+    		</select> 
+    		
+    		************************* Fim da logica antiga *************************-->	
     		
     		
-    		
+   		
     		
   		  	<label for="exampleFormControlSelect">Horário</label>
   		    <select class="form-control" id="horario" name="horaSelect">
@@ -114,9 +130,9 @@
   		  	<label for="exampleFormControlSelect">Instituição</label>
   		    <select class="form-control" id="horario" name="horaSelect">
 				<?php
-					$horas = getHoras($link);
-					foreach($horas as $hora){
-						echo "<option>".$hora['hora']."</option>";
+					$instituicoes = getInstituicoes($link);
+					foreach($instituicoes as $instituicao){
+						echo "<option>".$instituicao['NOME']."</option>";
 					}
 				?>
     		</select>
@@ -137,7 +153,9 @@
   		</div>
   		<button type="button" class="btn btn-success" onClick="submitTheForm(2)" >Salvar</button>
   	</form>
-				
+
+
+  	
 	</body>
 
 </html>

@@ -35,8 +35,8 @@ table.cabecalho {
     margin-left: 11%;
 }
 
-td.cabecalho {    
-    padding-top: 6px;
+.dropdown.show {
+    margin-top: -4px;
 }
 
 a.cabecalho {
@@ -50,4 +50,13 @@ table#grid {
 
 label {
     margin-top: 8px;
+}
+
+h3 {
+    text-align: center;
+}
+
+a#dropdownMenuLink {
+	background-color: #56af65;
+    border-color: #56af65;
 }
