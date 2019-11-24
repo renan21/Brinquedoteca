@@ -18,6 +18,7 @@
 									<th><h3>Horário</h3></th>
 									<th><h3>Sala</h3></th>
 									<th><h3>Responsável</h3></th>
+									<th><h3>Instituição</h3></th>
 									<th></th>
 									<th></th>
 			
@@ -30,7 +31,8 @@
 						<td><?= $agendamento['DATA'] ?></td>
 						<td><?= $agendamento['HORA'] ?></td>
 						<td><?= $agendamento['SALA'] ?></td>
-						<td>teste</td>
+						<td><?= $agendamento['RESPONSAVEL'] ?></td>
+						<td><?= $agendamento['INSTITUICAO'] ?></td>
 						<td><a href='php/excluirAgendamento.php?id=<?= $agendamento['ID'] ?>'><img src='menos.png'></a></td>
 						<td><a href='agendamento.php?id=<?= $agendamento['ID'] ?>'><img src='edit.png'></a></td>			
 					</tr>
