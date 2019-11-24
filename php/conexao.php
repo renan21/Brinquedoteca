@@ -89,4 +89,20 @@
 		return $instituicoes;
 		
 	}
+	
+	
+	function getResponsaveis($link){
+	
+		$responsaveis= array();
+		$query = "select * from responsavel order by nome";
+		$result = mysqli_query($link, $query);
+	
+		while($fetch = mysqli_fetch_assoc($result)){
+			array_push($responsaveis, $fetch);
+		}
+		return $responsaveis;
+	
+	}
+	
+	
 ?>

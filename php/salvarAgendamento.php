@@ -4,12 +4,14 @@
 	$sala = $_GET['salaSelect'];
 	$data = $_GET['dataSelect'];
 	$hora = $_GET['horaSelect'];
+	$responsavel = $_GET['respSelect'];
+	$instituicao = $_GET['instSelect'];
 	
 /*	$mes = $_GET['mesSelect'];
 	$dia = $_GET['diaSelect'];*/
 	
 	
-	$query = "insert into agendamentos (sala, data, hora) value ('{$sala}', '{$data}', '{$hora}')";
+	$query = "insert into agendamentos (sala, data, hora, instituicao, responsavel) value ('{$sala}', '{$data}', '{$hora}', '{$responsavel}', '{$instituicao}')";
 	
 /*	echo $query; */
 	

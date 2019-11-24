@@ -8,9 +8,9 @@
 	</head>
 	<body>
 		<?php	include('php/barra.php');	?>
-		<h3 id="titulo">Cadastro de Instituições</h3>	
+		<h3 id="titulo">Cadastro de responsáveis</h3>	
 		
-		<form id="formulario">
+		<form id="formulario" action="php/salvarResponsavel.php" method="POST">
 		
 		<label for="exampleFormControlSelect">Nome</label> 
 		<input class="form-control" type="text" placeholder="Default input" name="nome">
@@ -33,7 +33,7 @@
 		
 		</br>
 		
-		<button type="button" class="btn btn-success" onClick="validar()" >Salvar</button>		
+		<button type="submit" class="btn btn-success" onClick="" >Salvar</button>		
 		
 		</form>
 		
