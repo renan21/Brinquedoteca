@@ -14,9 +14,9 @@
 									  		</a>
 									
 											<div class='dropdown-menu' aria-labelledby='dropdownMenuLink'>
-									    		<a class='dropdown-item' href='cadastroInst.php'>Instituições</a>
-									    		<a class='dropdown-item' href='cadastroResp.php'>Responsáveis</a>
-									    		<a class='dropdown-item' href='cadastroBrinq.php'>Brinquedos</a>
+									    		<a class='dropdown-item' href='./instituicao.php'>Instituições</a>
+									    		<a class='dropdown-item' href='./responsavel.php'>Responsáveis</a>
+									    		<a class='dropdown-item' href='./materiais.php'>Brinquedos</a>
 									  			</div>
 										</div>				
 				

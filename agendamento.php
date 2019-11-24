@@ -128,7 +128,7 @@
     		
     		
   		  	<label for="exampleFormControlSelect">Instituição</label>
-  		    <select class="form-control" id="horario" name="horaSelect">
+  		    <select class="form-control" id="horario" name="instSelect">
 				<?php
 					$instituicoes = getInstituicoes($link);
 					foreach($instituicoes as $instituicao){
@@ -141,11 +141,11 @@
     		
     		
   		  	<label for="exampleFormControlSelect">Responsável</label>
-  		    <select class="form-control" id="horario" name="horaSelect">
+  		    <select class="form-control" id="horario" name="respSelect">
 				<?php
-					$horas = getHoras($link);
-					foreach($horas as $hora){
-						echo "<option>".$hora['hora']."</option>";
+					$responsaveis = getResponsaveis($link);
+					foreach($responsaveis as $responsavel){
+						echo "<option>".$responsavel['NOME']."</option>";
 					}
 				?>
     		</select>
