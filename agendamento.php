@@ -7,23 +7,28 @@
 		<title></title>
 				
 		<script type="text/javascript">
+		
 
         	$(function() {
         		$('.datetimepicker1').datetimepicker();
        		});
+        	
+        	
+			function submitTheForm(){
 
-			function submitTheForm(type){
+				var data = document.getElementById("dataSelect").value;
+				var hora = document.getElementById("horario").value;				
+				var dataHora = data + " " + hora;
+				var dataSis = sysdate();
 				
-			    var form = document.getElementById("formulario");
-					
-				if(type == 1){
-					form.action = "agendamento.php";					
-				} else{
-					form.action = "php/salvarAgendamento.php";
-				}
+				alert(dataHora);
+
 				
+			    var form = document.getElementById("formulario");					
+				form.action = "php/salvarAgendamento.php";
 				form.submit();
 			}
+
 			
 		</script>
 		
@@ -150,11 +155,68 @@
 				?>
     		</select>
     		
+    		
+    		
+    		
+    		
+  <!-- só descomentar
+  
+  			 
+  			 
+  		*******************	  CARROSSEL PARA SELECIONAR PRODUTOS, NÃO FUNCIONA! 	************
+  			  
+  			  	
+    		
+    		<label for="exampleFormControlSelect">Materiais</label>    		
+    		
+
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			  
+				<ol class="carousel-indicators">
+			    	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			    	<li data-target="#myCarousel" data-slide-to="1"></li>
+			    	<li data-target="#myCarousel" data-slide-to="2"></li>
+			  	</ol>
+			
+			  
+			  <div class="carousel-inner">
+			    <div class="item active">
+			      <h3>Materiais</h3>
+			    </div> 
+						    
+ 			  <?php
+				$materiais = getMateriais($link);
+					foreach($materiais as $material){
+						echo "<div class='item'>
+						 		<h3>".$material['MATERIAL']."</h3>
+							  </div>";
+					}
+				?> 				    
+			    
+			    
+			    
+			  </div>
+			
+			  
+			  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+			
+			
+			**************** FIM DO CARROSSEL PARA MATERIAIS ************************
+    		 		
+   aqui tambem, só descomentar --> 
+   
+   
   		</div>
-  		<button type="button" class="btn btn-success" onClick="submitTheForm(2)" >Salvar</button>
+  		<button type="button" class="btn btn-success" onClick="submitTheForm()" >Salvar</button>
   	</form>
-
-
   	
 	</body>
 

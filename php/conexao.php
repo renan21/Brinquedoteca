@@ -100,9 +100,19 @@
 		while($fetch = mysqli_fetch_assoc($result)){
 			array_push($responsaveis, $fetch);
 		}
-		return $responsaveis;
-	
+		return $responsaveis;	
 	}
+
+	function getMateriais($link){
 	
+		$materiais = array();
+		$query = "select * from material order by material";
+		$result = mysqli_query($link, $query);
+	
+		while($fetch = mysqli_fetch_assoc($result)){
+			array_push($materiais, $fetch);
+		}
+		return $materiais;
+	}	
 	
 ?>
