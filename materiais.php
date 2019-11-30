@@ -8,36 +8,32 @@
 	</head>
 	<body>
 		<?php	include('php/barra.php');				
-				$responsaveis = getResponsaveis($link);
+				$materiais = getMateriais($link);
 		
-				if ($responsaveis != null)
+				if ($materiais != null)
 						echo "
 							<table class='table table-hover' id='grid'>
 								<tr>
-									<th><h3>Nome</h3></th>									
-									<th><h3>Endereço</h3></th>
-									<th><h3>Telefone</h3></th>
+									<th><h3>Material</h3></th>									
+									<th><h3>Quantidade</h3></th>
 									<th></th>
 									<th></th>
 			
 								</tr>"
    						
 		?>
-				<?php foreach($responsaveis as $responsavel):?>
+				<?php foreach($materiais as $material):?>
 				
 					<tr>
-						<td><?= $responsavel['NOME'] ?></td>
-						<td><?= $responsavel['ENDERECO'] ?></td>
-						<td><?= $responsavel['TELEFONE'] ?></td>
-						<td><a href='php/excluirInstituicao.php?id=<?= $responsavel['ID'] ?>'><img src='menos.png'></a></td>
-						<td><a href='cadastroResp.php?id=<?= $responsavel['ID'] ?>'><img src='edit.png'></a></td>			
+						<td><?= $material['MATERIAL'] ?></td>
+						<td><?= $material['QUANTIDADE'] ?></td>
+						<td><a href='php/excluirBrinq.php?id=<?= $material['ID'] ?>'><img src='menos.png'></a></td>
+						<td><a href='cadastroBrinq.php?id=<?= $material['ID'] ?>'><img src='edit.png'></a></td>			
 					</tr>
 					
 					<?php	endforeach ?>	  
 			</table>
-			
-			Arrumar aqui, está a mesma tela que a de responsavel é deve ser a de meteriais!
-			
+						
 		<div id="rodape">
 			<button type="button" class="btn btn-success" onclick="window.location.href = 'cadastroBrinq.php'">Novo material</button>
 		</div>
